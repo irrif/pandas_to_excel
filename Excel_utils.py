@@ -19,12 +19,6 @@ def excel_utils_helpme():
     
 def helpme(function):
     print(f"{function.__name__} :\n{function.__doc__}")
-    
-
-def header_style_params_infos():
-    """
-    Fonction qui affiche les paramètres utiles pour le style de headers.
-    """
 
     
 def get_index(letter: str = "A", add_one: bool = False) -> int:
@@ -158,6 +152,7 @@ def get_coord(letter: str = "A", row: int = 1, add_one: bool = False) -> tuple:
     """
     
     return get_index(letter, add_one), row-1
+
 
 #-----------------------------------------------------------------------------------------------------------------------------------#
 #----------------------------------------- Modification des caractéristiques de l'écriture -----------------------------------------#
@@ -517,7 +512,6 @@ def apply_style_to_headers(writer: pd.ExcelWriter, sheet_name: str = 'Feuil1',
                            list_of_headers: List[list[list, dict]] = None, df: pd.DataFrame = None):
     """
     Fonction qui permet d'appliquer un style personnalisé a la premiere cellule de chaque colonne, pour personnaliser l'en-tête.
-    Pour plus d'information sur les paramètres utiles pour le style, appeler la fonction header_style_params_infos().
     
     Parameters
     ----------
